@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Redlines: Spec Sheet</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Redlines: Spec Sheet</h1>
+  <p class="hint">
+    Дублирует выделенный элемент рядом с оригиналом и обвешивает копию замерами
+    и списком существующих аннотаций (Redlines: Annotations, если они есть) — готовый лист
+    для передачи разработчикам.
+  </p>
+
+  <div class="field-row">
+    <span id="target-info" class="target-info">Выделите элемент в макете.</span>
+    <button type="button" id="refresh-selection-btn" data-appearance="secondary">Обновить</button>
+  </div>
+
+  <fieldset class="fieldset">
+    <legend>Расположение копии</legend>
+    <div class="field-row-compact">
+      <label>Направление</label>
+      <select id="direction-select">
+        <option value="right">Справа</option>
+        <option value="below">Снизу</option>
+      </select>
+      <label>Отступ</label>
+      <input type="number" id="gap-input" value="80" min="0" max="1000">
+    </div>
+  </fieldset>
+
+  <fieldset class="fieldset">
+    <legend>Что включить</legend>
+    <label class="checkbox-row"><input type="checkbox" id="opt-dimensions" checked><span>Ширина / высота</span></label>
+    <label class="checkbox-row"><input type="checkbox" id="opt-padding" checked><span>Отступы (padding)</span></label>
+    <label class="checkbox-row"><input type="checkbox" id="opt-gaps" checked><span>Промежутки (gap)</span></label>
+    <label class="checkbox-row"><input type="checkbox" id="opt-annotations" checked><span>Список аннотаций</span></label>
+  </fieldset>
+
+  <div id="status" class="status">
+    <span class="spinner" aria-hidden="true"></span>
+    <span id="status-text"></span>
+  </div>
+
+  <div class="preview-box">
+    <div id="preview" class="preview"></div>
+    <div id="preview-empty" class="preview-empty">Выделите элемент в макете</div>
+  </div>
+
+  <button type="button" id="create-btn" data-appearance="primary" disabled>Создать Spec Sheet</button>
+
+  <script type="module" src="ui.js"></script>
+</body>
+</html>

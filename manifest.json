@@ -1,0 +1,12 @@
+{
+  "name": "Redlines: Spec Sheet",
+  "description": "Дублирует выделенный элемент рядом с оригиналом и обвешивает копию замерами (width/height/padding/gap) и списком существующих аннотаций — готовый лист для передачи разработчикам.",
+  "version": 2,
+  "code": "plugin.js",
+  "icon": "icon.png",
+  "permissions": [
+    "content:read",
+    "content:write",
+    "library:read"
+  ]
+}
