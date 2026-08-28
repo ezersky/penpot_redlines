@@ -83,13 +83,3 @@ node simulate_flow.js   # полный UI-флоу через DOM-шим
 node run_plugin.js      # plugin.js с фейковым penpot (clone, group, обход дерева)
 ```
 
-## Вся серия Redlines
-
-| Плагин | Что делает |
-|---|---|
-| [Measures](../pp-measures) | Замеры width/height/padding/gap/distance |
-| [Annotations](../pp-annotations) | Нумерованные бейджи с описаниями + легенда |
-| **Spec Sheet** (этот) | Дубликат элемента + замеры + список аннотаций рядом |
-
-Все три — независимые плагины (каждый со своим `manifest.json`), но обмениваются данными через
-общую конвенцию меток `pluginData` (`ddx-*`) на фигурах, поэтому имеет смысл ставить все три.
